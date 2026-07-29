@@ -1,0 +1,13 @@
+Target_Variable: price
+
+Train_Test_Split:
+  test_size: 0.2
+  random_state: 42
+
+Linear_Regression_Params:
+  fit_intercept: true
+
+model_evaluation:
+  threshold: 0.60        # trained mode accuracy value 
+  metric: r2
+  save_metrics: True
