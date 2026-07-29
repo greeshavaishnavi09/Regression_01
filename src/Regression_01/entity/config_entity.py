@@ -28,3 +28,16 @@ class DataTransformationConfig:
     transformed_train_path : Path
     transformed_test_path : Path
     preprocessor_path : Path    
+
+
+from dataclasses import dataclass
+from pathlib import Path
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    root_dir : Path
+    STATUS_FILE : Path
+    transformed_train_path : Path
+    transformed_test_path : Path
+    preprocessor_path : Path
+    trained_model_file_path: Path    
