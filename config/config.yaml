@@ -33,10 +33,4 @@ data_transformation:
   transformed_test_path: artifacts/data_transformation/test.npy
   preprocessor_path: artifacts/data_transformation/preprocessor.pkl
 
-data_transformation:
-  root_dir: artifacts/data_transformation
-  STATUS_FILE: artifacts/data_validation/status.txt
-  unzip_data_dir: artifacts/data_ingestion/Housing.csv
-  transformed_train_path: artifacts/data_transformation/train.npy
-  transformed_test_path: artifacts/data_transformation/test.npy
-  preprocessor_path: artifacts/data_transformation/preprocessor.pkl
+

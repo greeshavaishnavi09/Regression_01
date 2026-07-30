@@ -78,19 +78,3 @@ class ConfigurationManager:
 
         return data_transformation_config
 
-    def get_model_trainer_config(self) -> ModelTrainerConfig:
-    
-            config = self.config.model_trainer
-    
-            create_directories([config.root_dir])
-    
-            model_trainer_config = ModelTrainerConfig(
-                root_dir=config.root_dir,
-                STATUS_FILE=config.STATUS_FILE,
-                transformed_train_path=config.transformed_train_path,
-                transformed_test_path=config.transformed_test_path,
-                preprocessor_path=config.preprocessor_path,
-                trained_model_file_path=config.trained_model_file_path
-            )
-    
-            return model_trainer_config
