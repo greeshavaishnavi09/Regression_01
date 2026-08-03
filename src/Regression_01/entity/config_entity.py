@@ -38,4 +38,16 @@ class ModelTrainerConfig:
     preprocessor_path : Path
     trained_model_file_path: Path
 
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+
+    root_dir: Path
+    model_report_path: Path
+    trained_model_path: Path
+    evaluation_report_path: Path
+    threshold: float
+    metric_name: str
+    save_metrics: bool    
+
    

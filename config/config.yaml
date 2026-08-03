@@ -40,3 +40,10 @@ model_trainer:
   preprocessor_path: artifacts/data_transformation/preprocessor.pkl
   trained_model_file_path : artifacts/model_trainer/model.pkl
 
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  model_report_path: artifacts/model_trainer/model_report.csv
+  trained_model_path: artifacts/model_trainer/model.pkl
+  evaluation_report_path: artifacts/model_evaluation/model_evaluation.csv
+
+
