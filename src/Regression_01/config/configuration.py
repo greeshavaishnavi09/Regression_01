@@ -63,18 +63,31 @@ class ConfigurationManager:
         data_transformation_config = DataTransformationConfig(
 
            root_dir=Path(config.root_dir),
-
            STATUS_FILE=Path(config.STATUS_FILE),
-
            unzip_data_dir=Path(config.unzip_data_dir),
-
            transformed_train_path=Path(config.transformed_train_path),
-
            transformed_test_path=Path(config.transformed_test_path),
-
            preprocessor_path=Path(config.preprocessor_path)
 
-         )
+        )
 
         return data_transformation_config
 
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+
+
+        config = self.config.model_trainer
+        
+        create_directories([config.root_dir])
+        
+        model_trainer_config = ModelTrainerConfig(
+            root_dir=Path(config.root_dir),
+            transformed_train_path=Path(config.transformed_train_path),
+            transformed_test_path=Path(config.transformed_test_path),
+            preprocessor_path=Path(config.preprocessor_path),
+            trained_model_file_path=Path(config.trained_model_file_path)
+            )
+
+        return model_trainer_config
+
+      
