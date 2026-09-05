@@ -6,6 +6,8 @@ from Regression_01.entity.config_entity import DataValidationConfig
 from Regression_01.entity.config_entity import DataTransformationConfig
 from Regression_01.entity.config_entity import ModelTrainerConfig
 from Regression_01.entity.config_entity import ModelEvaluationConfig
+from Regression_01.entity.config_entity import PredictionPipelineConfig
+
 
 
 
@@ -111,3 +113,14 @@ class ConfigurationManager:
             save_metrics=params.save_metrics
         )
         return model_evaluation_config  
+
+
+    def get_prediction_pipeline_config(self) -> PredictionPipelineConfig:
+        config = self.config.prediction_pipeline
+
+        prediction_pipeline_config = PredictionPipelineConfig(
+            preprocessor_path=Path(config.preprocessor_path),
+            model_path=Path(config.model_path)
+        )
+
+        return prediction_pipeline_config

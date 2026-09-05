@@ -50,4 +50,10 @@ class ModelEvaluationConfig:
     metric_name: str
     save_metrics: bool    
 
+@dataclass(frozen=True)
+class PredictionPipelineConfig:
+
+    preprocessor_path: Path
+    model_path: Path
+
    
